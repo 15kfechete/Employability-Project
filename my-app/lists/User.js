@@ -1,4 +1,4 @@
-const { Text, Checkbox, Password } = require('@keystonejs/fields')
+const { Text, Checkbox, Relationship, Password } = require('@keystonejs/fields')
 
 module.exports = {
   fields: {
@@ -17,6 +17,16 @@ module.exports = {
     password: {
       type: Password,
       isRequired: true
+    },
+    documents: {
+      type: Relationship,
+      ref: 'Document',
+      many: true
+    },
+    claims: {
+      type: Relationship,
+      ref: 'Claim.user',
+      many: true
     }
   }
 }
