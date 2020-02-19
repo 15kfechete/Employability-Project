@@ -25,7 +25,7 @@ module.exports = {
     },
     claims: {
       type: Relationship,
-      ref: 'Claim',
+      ref: 'Claim.user',
       many: true
     }
   }

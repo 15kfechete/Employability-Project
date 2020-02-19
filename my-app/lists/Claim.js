@@ -8,7 +8,7 @@ module.exports = {
     },
     user: {
         type: Relationship,
-        ref: 'User'
+        ref: 'User.claims'
     },
     documents: {
         type: Relationship,
