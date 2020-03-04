@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import background from "./images/background.jpg";
-import logo from "./images/logo.png";
+import background from "../images/background.jpg";
+import logo from "../images/logo.png";
 
 function App() {
   return (
@@ -11,10 +11,10 @@ function App() {
           <img src={logo}></img>
         </a>
         <nav>
-          <a>NAv1</a>
-          <a>NAv2</a>
-          <a>NAv3</a>
-          <a>NAv4</a>
+          <a>Nav1</a>
+          <a>Nav2</a>
+          <a>Nav3</a>
+          <a>Nav4</a>
         </nav>
         <button>LOGIN</button>
       </header>
