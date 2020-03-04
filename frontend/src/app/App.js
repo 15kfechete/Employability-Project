@@ -18,7 +18,28 @@ function App() {
         </nav>
         <button>LOGIN</button>
       </header>
-      <img src={background}></img>
+      <img className="banner-image" src={background}></img>
+      <main>
+        <h2>LOGIN TO YOUR ACCOUNT</h2>
+        <form>
+          <div>
+            <label className="username">Username:</label>
+            <input type="text"></input>
+          </div>
+          <div>
+            <label className="password">Password:</label>
+            <input type="text"></input>
+          </div>
+          <button type="submit">LOGIN</button>
+          <a>NOT REGISTERED?</a>
+        </form>
+      </main>
+      <footer>
+        <img alt="paymentshield"></img>
+        <div>Latest Blog Post</div>
+        <div>product company stuff</div>
+        <div>product company stuff</div>
+      </footer>
     </div>
   );
 }
