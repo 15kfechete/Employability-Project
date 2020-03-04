@@ -3,6 +3,8 @@ import "./App.css";
 import background from "../images/background.jpg";
 import logo from "../images/logo.png";
 
+import LoginPage from "./pages/login/login";
+
 function App() {
   return (
     <div className="App">
@@ -20,19 +22,7 @@ function App() {
       </header>
       <img className="banner-image" src={background}></img>
       <main>
-        <h2>LOGIN TO YOUR ACCOUNT</h2>
-        <form>
-          <div>
-            <label className="username">Username:</label>
-            <input type="text"></input>
-          </div>
-          <div>
-            <label className="password">Password:</label>
-            <input type="text"></input>
-          </div>
-          <button type="submit">LOGIN</button>
-          <a>NOT REGISTERED?</a>
-        </form>
+        <LoginPage />
       </main>
       <footer>
         <img alt="paymentshield"></img>

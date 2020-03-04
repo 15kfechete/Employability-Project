@@ -1,0 +1,15 @@
+form {
+  display: grid;
+  grid-template-areas:
+    "username username"
+    "password password"
+    "login register";
+}
+
+.username {
+  grid-area: username;
+}
+
+.password {
+  grid-area: password;
+}
