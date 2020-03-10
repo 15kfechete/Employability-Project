@@ -4,19 +4,19 @@ import "./login.css";
 function LoginPage() {
   return (
     <>
-      <h2>LOGIN TO YOUR ONLINE ACCOUNT</h2>
-      <form>
-        <div className="username">
-          <label>Username:</label>
-          <input type="text"></input>
-        </div>
-        <div className="password">
-          <label>Password:</label>
-          <input type="password"></input>
-        </div>
-        <button type="submit">LOGIN</button>
-        <a>NOT REGISTERED?</a>
-      </form>
+      <div className="contentBlock">
+        <h2>LOGIN TO YOUR ONLINE ACCOUNT</h2>
+        <form>
+          <div className="username">
+            <input type="text"></input>
+          </div>
+          <div className="password">
+            <input type="password"></input>
+          </div>
+          <button type="submit">LOGIN</button>
+          <button type="submit">Not Registered?</button>
+        </form>
+      </div>
     </>
   );
 }
