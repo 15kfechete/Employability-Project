@@ -4,7 +4,7 @@ import "./login.css";
 function LoginPage() {
   return (
     <>
-      <h2>LOGIN TO YOUR ACCOUNT</h2>
+      <h2>LOGIN TO YOUR ONLINE ACCOUNT</h2>
       <form>
         <div className="username">
           <label>Username:</label>
