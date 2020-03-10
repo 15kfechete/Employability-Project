@@ -26,10 +26,10 @@ function App() {
         <LoginPage />
       </main>
       <footer>
+        <div className="footerLogo">
+          <img src={logo2}></img>
+        </div>
         <div className="footerrLeft">
-          <div className="footerLogo">
-            <img src={logo2}></img>
-          </div>
           <div className="footerText">
             <h4>Latest Blog Post</h4>
             <h3>Ready to get started?</h3>
@@ -43,8 +43,8 @@ function App() {
         </div>
 
         <div className="footerLeftCentre">
-          <h4>PRODUCTS</h4>
           <ul>
+            <h4>PRODUCTS</h4>
             <li>Home Insurance</li>
             <li>Landlords Insurance</li>
             <li>Rent Protection</li>
@@ -56,8 +56,8 @@ function App() {
         </div>
 
         <div className="footerRightCentre">
-          <h4>POLICY DOCUMENTS</h4>
           <ul>
+            <h4>POLICY DOCUMENTS</h4>
             <li>Home Insurance</li>
             <li>Landlords Insurance</li>
             <li>Rent Protection</li>
@@ -68,8 +68,8 @@ function App() {
           </ul>
         </div>
         <div className="footerRight">
-          <h4>SITEMAP</h4>
           <ul>
+            <h4>SITEMAP</h4>
             <li>Home</li>
             <li>About us</li>
             <li>Careers</li>
