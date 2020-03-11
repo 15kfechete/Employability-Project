@@ -4,6 +4,7 @@ import "./login.css";
 function LoginPage() {
   return (
     <>
+      <img className="banner-image" src={background}></img>
       <div className="contentBlock">
         <h2>LOGIN TO YOUR ONLINE ACCOUNT</h2>
         <form>
