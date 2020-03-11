@@ -1,10 +1,4 @@
-const {
-  Text,
-  Checkbox,
-  Relationship,
-  Password,
-  Email
-} = require('@keystonejs/fields')
+const { Text, Checkbox, Relationship, Password } = require('@keystonejs/fields')
 
 module.exports = {
   fields: {
@@ -17,7 +11,7 @@ module.exports = {
       isRequired: true
     },
     email: {
-      type: Email,
+      type: Text,
       isRequired: true
     },
     isAdmin: {
