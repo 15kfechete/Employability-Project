@@ -1,10 +1,14 @@
+import React from "react";
+
 import "./footer.css";
+
+import logo from "../../images/logo2.png";
 
 const Footer = () => {
   return (
     <footer>
       <div className="footerLogo">
-        <img src={logo2}></img>
+        <img src={logo}></img>
       </div>
       <div className="footerrLeft">
         <div className="footerText">

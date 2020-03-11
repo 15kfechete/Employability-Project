@@ -1,5 +1,7 @@
 import React from "react";
+
 import "./login.css";
+import background from "../../../images/background.jpg";
 
 function LoginPage() {
   return (
