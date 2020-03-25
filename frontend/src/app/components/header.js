@@ -1,11 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 
-import "./header.css";
+import { AppContext } from '../AppContext'
+import './header.css'
 
-import logo from "../../images/logo.png";
+import logo from '../../images/logo.png'
 
 const Header = () => {
+  const [state, setState] = useContext(AppContext)
+
   return (
     <header className="App-header">
       <a>
@@ -16,11 +19,17 @@ const Header = () => {
         <Link to="/register">Register</Link>
         <Link to="/profile">Profile</Link>
       </nav>
-      <Link to="/login">
-        <button>LOGIN</button>
-      </Link>
+      {state.user ? (
+        <Link to="/logout">
+          <button>LOGOUT</button>
+        </Link>
+      ) : (
+        <Link to="/login">
+          <button>LOGIN</button>
+        </Link>
+      )}
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

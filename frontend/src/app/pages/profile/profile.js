@@ -1,37 +1,19 @@
-import React from "react";
-import { useQuery } from "@apollo/react-hooks";
-import { gql } from "apollo-boost";
+import React, { useContext } from 'react'
+import { Redirect } from 'react-router-dom'
 
-import "./profile.css";
-
-const GET_USER = gql`
-  {
-    User(where: { id: "5e5f8040edf45e20bd2f14fc" }) {
-      firstName
-      lastName
-      claims {
-        id
-        documents {
-          file {
-            publicUrl
-          }
-          name
-        }
-        description
-      }
-    }
-  }
-`;
+import { AppContext } from '../../AppContext'
+import './profile.css'
 
 function ProfilePage() {
-  const { loading, error, data } = useQuery(GET_USER);
+  const [state, setState] = useContext(AppContext)
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  console.log(state)
 
-  console.log(data.User);
+  if (!state.user) {
+    return <Redirect to="/login" />
+  }
 
-  const { firstName, lastName, claims } = data.User;
+  const { firstName, lastName, claims } = state.user
 
   return (
     <>
@@ -45,7 +27,7 @@ function ProfilePage() {
         ))}
       </section>
     </>
-  );
+  )
 }
 
-export default ProfilePage;
+export default ProfilePage

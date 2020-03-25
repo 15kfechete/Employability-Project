@@ -12,7 +12,8 @@ module.exports = {
     },
     email: {
       type: Text,
-      isRequired: true
+      isRequired: true,
+      isUnique: true
     },
     isAdmin: {
       type: Checkbox,

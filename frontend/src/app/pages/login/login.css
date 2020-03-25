@@ -2,7 +2,7 @@
   display: block;
   width: 50%;
   margin: 0 auto;
-  padding-top: 150px;
+  padding-top: 100px;
   padding-bottom: 150px;
 }
 
@@ -11,15 +11,17 @@ form {
   grid-template-areas:
     "username username"
     "password password"
-    "login register";
+    "login login";
 }
 
 .username {
   grid-area: username;
+  padding-top: 30px;
 }
 
 .password {
   grid-area: password;
+  padding-top: 30px;
 }
 
 button {
@@ -27,8 +29,8 @@ button {
   color: white;
   border-radius: 5px;
   padding: 16px 18px;
-  max-width: 200px;
-  max-height: 50px;
+  width: 200px;
+  height: 50px;
 }
 
 input {
@@ -37,10 +39,6 @@ input {
   max-height: 50px;
 }
 
-.username {
-  padding-top: 30px;
-}
-
-.password {
-  padding-top: 30px;
+.buttons {
+  grid-area: login;
 }
