@@ -1,13 +1,15 @@
-import React, { useContext } from 'react'
-import { Link } from 'react-router-dom'
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
 
-import { AppContext } from '../AppContext'
-import './header.css'
+import { AppContext } from "../AppContext";
+import "./header.css";
 
-import logo from '../../images/logo.png'
+import logo from "../../images/logo.png";
+
+import { ThemeProvider } from "styled-components";
 
 const Header = () => {
-  const [state, setState] = useContext(AppContext)
+  const [state, setState] = useContext(AppContext);
 
   return (
     <header className="App-header">
@@ -29,7 +31,7 @@ const Header = () => {
         </Link>
       )}
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

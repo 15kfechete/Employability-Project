@@ -1,3 +1,9 @@
+@media only screen and (max-device-width: 400px) {
+  footer {
+    display: none;
+  }
+}
+
 footer {
   background-color: #2c353c;
   color: white;

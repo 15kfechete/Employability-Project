@@ -1,3 +1,14 @@
+@media only screen and (max-device-width: 400px) {
+  .banner-image {
+    width: 400px;
+    object-fit: cover;
+  }
+}
+
+.banner-image {
+  width: 100%;
+  object-fit: cover;
+}
 .contentBlock {
   display: block;
   width: 50%;
