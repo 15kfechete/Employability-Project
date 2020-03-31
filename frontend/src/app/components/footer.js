@@ -62,6 +62,25 @@ const Footer = () => {
           <li>Modern Slavery Act</li>
         </ul>
       </div>
+
+      <div className="topLogo">
+        <img src={logo}></img>
+      </div>
+
+      <div className="siteMap">
+        <ul>
+          <h4>SITEMAP</h4>
+          <li>Home</li>
+          <li>About us</li>
+          <li>Careers</li>
+          <li>Contact Us</li>
+          <li>Terms & Conditions</li>
+          <li>Cookies</li>
+          <li>Accessibility</li>
+          <li>Fair Processing Notice</li>
+          <li>Modern Slavery Act</li>
+        </ul>
+      </div>
     </footer>
   );
 };
