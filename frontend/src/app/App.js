@@ -1,21 +1,24 @@
-import React from 'react'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import ApolloClient from 'apollo-boost'
-import { ApolloProvider } from '@apollo/react-hooks'
+import React, { useState } from "react";
 
-import './App.css'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "@apollo/react-hooks";
 
-import Header from './components/header'
-import Footer from './components/footer'
+import { Burger, Menu } from "./components";
 
-import LoginPage from './pages/login/login'
-import ProfilePage from './pages/profile/profile'
+import "./App.css";
 
-import { AppProvider } from './AppContext'
+import Header from "./components/header";
+import Footer from "./components/footer";
+
+import LoginPage from "./pages/login/login";
+import ProfilePage from "./pages/profile/profile";
+
+import { AppProvider } from "./AppContext";
 
 const client = new ApolloClient({
-  uri: 'http://localhost:3000/admin/api',
-})
+  uri: "http://localhost:3000/admin/api"
+});
 
 function App() {
   return (
@@ -41,7 +44,7 @@ function App() {
         </Router>
       </ApolloProvider>
     </AppProvider>
-  )
+  );
 }
 
-export default App
+export default App;
