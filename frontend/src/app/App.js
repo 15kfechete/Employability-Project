@@ -13,11 +13,12 @@ import Footer from "./components/footer";
 
 import LoginPage from "./pages/login/login";
 import ProfilePage from "./pages/profile/profile";
+import RegisterPage from "./pages/register/register";
 
 import { AppProvider } from "./AppContext";
 
 const client = new ApolloClient({
-  uri: "http://localhost:3000/admin/api"
+  uri: "http://localhost:3000/admin/api",
 });
 
 function App() {
@@ -32,7 +33,9 @@ function App() {
                 <Route path="/login">
                   <LoginPage />
                 </Route>
-                <Route path="/register">Register!</Route>
+                <Route path="/register">
+                  <RegisterPage />
+                </Route>
                 <Route path="/profile">
                   <ProfilePage />
                 </Route>

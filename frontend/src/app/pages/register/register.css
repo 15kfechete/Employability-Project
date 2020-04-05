@@ -1,0 +1,55 @@
+@media only screen and (max-device-width: 400px) {
+  .banner-image {
+    width: 400px;
+    object-fit: cover;
+  }
+}
+
+.banner-image {
+  width: 100%;
+  object-fit: cover;
+}
+.contentBlock {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+
+form {
+  display: grid;
+  grid-template-areas:
+    "username username"
+    "password password"
+    "login login";
+}
+
+.username {
+  grid-area: username;
+  padding-top: 30px;
+}
+
+.password {
+  grid-area: password;
+  padding-top: 30px;
+}
+
+button {
+  background-color: #f08135;
+  color: white;
+  border-radius: 5px;
+  padding: 16px 18px;
+  width: 200px;
+  height: 50px;
+}
+
+input {
+  height: 100px;
+  width: 100%;
+  max-height: 50px;
+}
+
+.buttons {
+  grid-area: login;
+}

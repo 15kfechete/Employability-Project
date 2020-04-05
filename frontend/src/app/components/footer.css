@@ -1,63 +1,65 @@
-@media only screen and (max-device-width: 400px) {
-  footer {
-    background-color: #2c353c;
-    color: white;
+@supports (display: grid) {
+  @media only screen and (max-device-width: 400px) {
+    footer {
+      background-color: #2c353c;
+      color: white;
 
-    grid-template-columns: "footerTop";
-    grid-template-rows: ;
-  }
+      display: grid;
+      grid-template-areas: "footerLogo footerLeft . footerLeftCentre footerRightCentre footerRight";
+      grid-template-columns: 15% 20% 5% 1fr 1fr 1fr;
+    }
 
-  .footerLogo {
-    margin: 0 auto;
+    .footerLogo {
+      margin: 0 auto;
 
-    grid-area: footerTop;
-  }
+      grid-area: footerTop;
+    }
 
-  .footerRight {
-    padding-top: 30px;
-    margin: 0 auto;
+    .footerRight {
+      padding-top: 30px;
+      margin: 0 auto;
 
-    grid-area: footerBottom;
-  }
+      grid-area: footerBottom;
+    }
 
-  .footerLeft {
-    grid-area: footerLeft;
-    display: none;
-  }
+    .footerLeft {
+      grid-area: footerLeft;
+      display: none;
+    }
 
-  .footerLeftCentre {
-    grid-area: footerLeftCentre;
+    .footerLeftCentre {
+      grid-area: footerLeftCentre;
 
-    border-style: solid;
-    border-right: white;
-    border-top: white;
-    border-bottom: white;
-    border-width: 2px;
+      border-style: solid;
+      border-right: white;
+      border-top: white;
+      border-bottom: white;
+      border-width: 2px;
 
-    display: none;
-  }
-  .footerRightCentre {
-    grid-area: footerRightCentre;
-    display: none;
-  }
+      display: none;
+    }
+    .footerRightCentre {
+      grid-area: footerRightCentre;
+      display: none;
+    }
 
-  .footerText {
-    display: none;
-  }
+    .footerText {
+      display: none;
+    }
 
-  footer h4 {
-    list-style-type: none;
-    text-align: left;
-    padding-top: 15px;
-  }
+    footer h4 {
+      list-style-type: none;
+      text-align: left;
+      padding-top: 15px;
+    }
 
-  footer ul li {
-    list-style-type: none;
-    text-align: left;
-    padding-top: 15px;
+    footer ul li {
+      list-style-type: none;
+      text-align: left;
+      padding-top: 15px;
+    }
   }
 }
-
 footer {
   background-color: #2c353c;
   color: white;
