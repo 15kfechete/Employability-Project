@@ -1,11 +1,11 @@
-import React, { useContext, useState } from 'react'
-import { useLazyQuery } from '@apollo/react-hooks'
-import { gql } from 'apollo-boost'
-import { Redirect } from 'react-router-dom'
+import React, { useContext, useState } from "react";
+import { useLazyQuery } from "@apollo/react-hooks";
+import { gql } from "apollo-boost";
+import { Redirect } from "react-router-dom";
 
-import { AppContext } from '../../AppContext'
-import './login.css'
-import background from '../../../images/background.jpg'
+import { AppContext } from "../../AppContext";
+import "./login.css";
+import background from "../../../images/background.jpg";
 
 const GET_USER_QUERY = gql`
   query getUser($email: String!) {
@@ -24,33 +24,33 @@ const GET_USER_QUERY = gql`
       }
     }
   }
-`
+`;
 
 function LoginPage() {
-  const [email, setEmail] = useState('')
-  const [password, setPassword] = useState('')
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const [state, setState] = useContext(AppContext)
+  const [state, setState] = useContext(AppContext);
 
   const [loadUser, { called, loading, data }] = useLazyQuery(GET_USER_QUERY, {
     variables: { email: email },
-  })
+  });
 
-  const handleSubmit = event => {
-    event.preventDefault()
-    loadUser()
-  }
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    loadUser();
+  };
 
   if (called) {
     if (loading) {
-      return <p>Loading...</p>
+      return <p>Loading...</p>;
     }
-    setState(state => ({
+    setState((state) => ({
       ...state,
       user: data.allUsers[0],
-    }))
-    console.log('Setting state!')
-    return <Redirect to="/profile" />
+    }));
+    console.log("Setting state!");
+    return <Redirect to="/profile" />;
   }
 
   if (!called) {
@@ -58,36 +58,36 @@ function LoginPage() {
       <>
         <img className="banner-image" src={background}></img>
         <form className="contentBlock" onSubmit={handleSubmit}>
-          <h2>LOGIN TO YOUR ONLINE ACCOUNT</h2>
+          <h2>LOGIN</h2>
           <div className="username">
-            <label>Email:</label>
+            <label>Email</label>
             <input
               type="text"
-              onChange={e => setEmail(e.target.value)}
+              onChange={(e) => setEmail(e.target.value)}
               value={email}
             ></input>
           </div>
           <div className="password">
-            <label>Password:</label>
+            <label>Password</label>
             <input
               type="password"
-              onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
               value={password}
             ></input>
           </div>
           <div className="buttons">
-            <button type="submit">LOGIN</button>
-            <button type="submit" disabled>
-              Not Registered?
+            <button className="loginButton" type="submit">
+              LOGIN
             </button>
           </div>
+          <h4>Not logged in?</h4>
         </form>
       </>
-    )
+    );
   }
 }
 
-export default LoginPage
+export default LoginPage;
 
 /*
 <a
