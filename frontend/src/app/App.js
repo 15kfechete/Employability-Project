@@ -35,10 +35,9 @@ function App() {
                 <Route path="/register">
                   <RegisterPage />
                 </Route>
-                <Route path="/profile">
+                <Route path="/">
                   <ProfilePage />
                 </Route>
-                <Route path="/">Home :D</Route>
               </Switch>
             </main>
             <Footer />

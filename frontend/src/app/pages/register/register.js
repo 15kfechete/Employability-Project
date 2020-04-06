@@ -1,11 +1,11 @@
-import React, { useContext, useState } from "react";
-import { useLazyQuery } from "@apollo/react-hooks";
-import { gql } from "apollo-boost";
-import { Redirect } from "react-router-dom";
+import React, { useContext, useState } from 'react'
+import { useLazyQuery } from '@apollo/react-hooks'
+import { gql } from 'apollo-boost'
+import { Redirect } from 'react-router-dom'
 
-import { AppContext } from "../../AppContext";
-import "./register.css";
-import background from "../../../images/background.jpg";
+import { AppContext } from '../../AppContext'
+import './register.css'
+import background from '../../../images/background.jpg'
 
 const GET_USER_QUERY = gql`
   query getUser($email: String!) {
@@ -24,33 +24,33 @@ const GET_USER_QUERY = gql`
       }
     }
   }
-`;
+`
 
 function LoginPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
-  const [state, setState] = useContext(AppContext);
+  const [state, setState] = useContext(AppContext)
 
   const [loadUser, { called, loading, data }] = useLazyQuery(GET_USER_QUERY, {
     variables: { email: email },
-  });
+  })
 
   const handleSubmit = (event) => {
-    event.preventDefault();
-    loadUser();
-  };
+    event.preventDefault()
+    loadUser()
+  }
 
   if (called) {
     if (loading) {
-      return <p>Loading...</p>;
+      return <p>Loading...</p>
     }
     setState((state) => ({
       ...state,
       user: data.allUsers[0],
-    }));
-    console.log("Setting state!");
-    return <Redirect to="/profile" />;
+    }))
+    console.log('Setting state!')
+    return <Redirect to="/" />
   }
 
   if (!called) {
@@ -91,11 +91,11 @@ function LoginPage() {
           </div>
         </form>
       </>
-    );
+    )
   }
 }
 
-export default LoginPage;
+export default LoginPage
 
 /*
 <a
