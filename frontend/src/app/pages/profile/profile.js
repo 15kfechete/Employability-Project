@@ -22,9 +22,13 @@ function ProfilePage() {
       </h2>
       <section>
         <h3>Here are your claims:</h3>
-        {claims.map(claim => (
-          <div key={claim.id}>{claim.description}</div>
-        ))}
+        <div className="claims">
+          {claims.map((claim) => (
+            <h3 className="claim" key={claim.id}>
+              {claim.description}
+            </h3>
+          ))}
+        </div>
       </section>
     </>
   )
