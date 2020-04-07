@@ -1,15 +1,14 @@
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-import { AppContext } from "../AppContext";
-import "./header.css";
+import { Burger, Menu } from '../components'
+import { AppContext } from '../AppContext'
 
-import logo from "../../images/logo.png";
-
-import { ThemeProvider } from "styled-components";
+import './header.css'
+import logo from '../../images/logo.png'
 
 const Header = () => {
-  const [state, setState] = useContext(AppContext);
+  const [open, setOpen] = useState(false)
 
   return (
     <header className="App-header">
@@ -17,21 +16,11 @@ const Header = () => {
         <img src={logo}></img>
       </a>
       <nav>
-        <Link to="/">Home</Link>
-        <Link to="/register">Register</Link>
-        <Link to="/profile">Profile</Link>
+        <Menu open={open} setOpen={setOpen} />
+        <Burger open={open} setOpen={setOpen} />
       </nav>
-      {state.user ? (
-        <Link to="/logout">
-          <button>LOGOUT</button>
-        </Link>
-      ) : (
-        <Link to="/login">
-          <button>LOGIN</button>
-        </Link>
-      )}
     </header>
-  );
-};
+  )
+}
 
-export default Header;
+export default Header

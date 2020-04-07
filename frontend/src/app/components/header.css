@@ -1,8 +1,8 @@
 header {
   background-color: white;
   padding: 10px;
-  display: grid;
-  grid-template-columns: 3fr 3fr 1fr;
+  display: flex;
+  justify-content: stretch;
 }
 
 header nav {

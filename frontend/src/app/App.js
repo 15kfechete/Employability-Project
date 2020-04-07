@@ -1,25 +1,24 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import ApolloClient from 'apollo-boost'
+import { ApolloProvider } from '@apollo/react-hooks'
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "@apollo/react-hooks";
+import { Burger, Menu } from './components'
 
-import { Burger, Menu } from "./components";
+import Header from './components/header'
+import Footer from './components/footer'
 
-import "./App.css";
+import LoginPage from './pages/login/login'
+import ProfilePage from './pages/profile/profile'
+import RegisterPage from './pages/register/register'
 
-import Header from "./components/header";
-import Footer from "./components/footer";
+import { AppProvider } from './AppContext'
 
-import LoginPage from "./pages/login/login";
-import ProfilePage from "./pages/profile/profile";
-import RegisterPage from "./pages/register/register";
-
-import { AppProvider } from "./AppContext";
+import './App.css'
 
 const client = new ApolloClient({
-  uri: "http://localhost:3000/admin/api",
-});
+  uri: 'http://localhost:3000/admin/api',
+})
 
 function App() {
   return (
@@ -36,10 +35,9 @@ function App() {
                 <Route path="/register">
                   <RegisterPage />
                 </Route>
-                <Route path="/profile">
+                <Route path="/">
                   <ProfilePage />
                 </Route>
-                <Route path="/">Home :D</Route>
               </Switch>
             </main>
             <Footer />
@@ -47,7 +45,7 @@ function App() {
         </Router>
       </ApolloProvider>
     </AppProvider>
-  );
+  )
 }
 
-export default App;
+export default App

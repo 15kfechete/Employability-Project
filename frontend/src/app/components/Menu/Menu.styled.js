@@ -1,22 +1,21 @@
 // Menu.styled.js
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  background: ${({ theme }) => theme.primaryLight};
+  background: #8fc99d;
   height: 100vh;
-  text-align: left;
-  padding: 2rem;
+  text-align: right;
+  padding: 3rem;
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   transition: transform 0.3s ease-in-out;
-  transform: "translateX(-100%)";
-  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
+  transform: 'translateX(-100%)';
+  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
 
-  @media (max-width: ${({ theme }) => theme.mobile}) {
+  @media (max-width: 400px) {
     width: 100%;
   }
 
@@ -26,17 +25,17 @@ export const StyledMenu = styled.nav`
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
-    color: ${({ theme }) => theme.primaryDark};
+    color: white;
     text-decoration: none;
     transition: color 0.3s linear;
 
-    @media (max-width: ${({ theme }) => theme.mobile}) {
+    @media (max-width: 400px) {
       font-size: 1.5rem;
       text-align: center;
     }
 
     &:hover {
-      color: ${({ theme }) => theme.primaryHover};
+      color: gray;
     }
   }
-`;
+`

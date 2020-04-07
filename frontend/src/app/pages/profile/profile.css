@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .banner-image {
   width: 100%;
   object-fit: cover;
@@ -89,3 +90,20 @@ input {
     width: 100%;
   }
 }
+=======
+.claims {
+  display: grid;
+  grid-template: 1fr;
+}
+
+.claim {
+  width: 80vw;
+  height: 50px;
+  background-color: #65b6b6;
+  text-align: center;
+  border-radius: 100px 100px 100px 100px;
+
+  margin: 1rem;
+  padding-top: 1rem;
+}
+>>>>>>> 33eb55650279e02f59615ada524e08461c19744e
