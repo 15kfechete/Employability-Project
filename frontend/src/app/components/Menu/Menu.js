@@ -1,13 +1,13 @@
-import React, { useContext, useState } from 'react'
-import { bool } from 'prop-types'
-import { Link } from 'react-router-dom'
+import React, { useContext, useState } from "react";
+import { bool } from "prop-types";
+import { Link } from "react-router-dom";
 
-import { AppContext } from '../../AppContext'
+import { AppContext } from "../../AppContext";
 
-import { StyledMenu } from './Menu.styled'
+import { StyledMenu } from "./Menu.styled";
 
 const Menu = ({ open, setOpen }) => {
-  const [state, setState] = useContext(AppContext)
+  const [state, setState] = useContext(AppContext);
 
   return (
     <StyledMenu open={open}>
@@ -21,14 +21,19 @@ const Menu = ({ open, setOpen }) => {
           </Link>
         </>
       ) : (
-        <Link to="/login" onClick={() => setOpen(false)}>
-          LOGIN
-        </Link>
+        <>
+          <Link to="/login" onClick={() => setOpen(false)}>
+            LOGIN
+          </Link>
+          <Link to="/register" onClick={() => setOpen(false)}>
+            Register
+          </Link>
+        </>
       )}
     </StyledMenu>
-  )
-}
+  );
+};
 Menu.propTypes = {
   open: bool.isRequired,
-}
-export default Menu
+};
+export default Menu;

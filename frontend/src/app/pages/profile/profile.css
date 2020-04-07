@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-.banner-image {
+<<<<<<< HEAD .banner-image {
   width: 100%;
   object-fit: cover;
 }
@@ -90,7 +89,6 @@ input {
     width: 100%;
   }
 }
-=======
 .claims {
   display: grid;
   grid-template: 1fr;
@@ -106,4 +104,3 @@ input {
   margin: 1rem;
   padding-top: 1rem;
 }
->>>>>>> 33eb55650279e02f59615ada524e08461c19744e

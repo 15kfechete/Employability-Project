@@ -1,5 +1,5 @@
 // Menu.styled.js
-import styled from 'styled-components'
+import styled from "styled-components";
 
 export const StyledMenu = styled.nav`
   display: flex;
@@ -12,8 +12,8 @@ export const StyledMenu = styled.nav`
   top: 0;
   right: 0;
   transition: transform 0.3s ease-in-out;
-  transform: 'translateX(-100%)';
-  transform: ${({ open }) => (open ? 'translateX(0)' : 'translateX(100%)')};
+  transform: "translateX(-100%)";
+  transform: ${({ open }) => (open ? "translateX(0)" : "translateX(100%)")};
 
   @media (max-width: 400px) {
     width: 100%;
@@ -38,4 +38,4 @@ export const StyledMenu = styled.nav`
       color: gray;
     }
   }
-`
+`;
