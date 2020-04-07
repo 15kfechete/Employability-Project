@@ -84,10 +84,10 @@ function LoginPage() {
             ></input>
           </div>
           <div className="buttons">
-            <button type="submit">LOGIN</button>
-            <button type="submit" disabled>
-              Not Registered?
+            <button className="loginButton" type="submit">
+              Register
             </button>
+            Not Registered?
           </div>
         </form>
       </>
