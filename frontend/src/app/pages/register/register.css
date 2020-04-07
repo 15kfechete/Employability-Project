@@ -25,11 +25,17 @@ form {
     "login login";
 }
 
+.firstname {
+  padding-top: 30px;
+}
+
+.lastname {
+  padding-top: 30px;
+}
 .username {
   grid-area: username;
   padding-top: 30px;
 }
-
 .password {
   grid-area: password;
   padding-top: 30px;

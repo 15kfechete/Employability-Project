@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const StyledMenu = styled.nav`
   display: flex;
   flex-direction: column;
-  background: #8fc99d;
+  background: #2c353c;
   height: 100vh;
   text-align: right;
   padding: 3rem;
