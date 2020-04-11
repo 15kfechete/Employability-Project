@@ -46,6 +46,41 @@ footer ul li {
 
 @media only screen and (max-device-width: 400px) {
   footer {
+    background-color: #2c353c;
+    color: white;
+    padding: 60px;
+
+    display: grid;
+    grid-template-areas: "footerLogo footerLeft . footerLeftCentre footerRightCentre footerRight";
+    grid-template-columns: 15% 20% 5% 1fr 1fr 1fr;
+  }
+
+  .footerLogo {
+    display: none;
+  }
+
+  .footerLeft {
+    display: none;
+  }
+
+  .footerLeftCentre {
+    display: none;
+  }
+  .footerRightCentre {
+    display: none;
+  }
+  .footerRight {
+    display: none;
+  }
+
+  footer h4 {
+    display: none;
+  }
+
+  footer ul li {
+    display: none;
+  }
+  .footerText {
     display: none;
   }
 }

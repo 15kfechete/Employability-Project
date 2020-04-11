@@ -58,7 +58,6 @@ input {
 
 @media only screen and (max-device-width: 400px) {
   body {
-    background-color: #f08135;
   }
 
   .banner-image {
@@ -76,9 +75,9 @@ input {
   }
 
   .loginButton {
-    background-color: #000000;
+    background-color: #f08135;
     border: none;
-    color: #f08135;
+    color: #000000;
     padding: 20px;
     text-align: center;
     text-decoration: none;
