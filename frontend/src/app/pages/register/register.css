@@ -53,6 +53,10 @@ input {
   grid-area: login;
 }
 
+.linkHighlight {
+  font-weight: bolder;
+}
+
 @media only screen and (max-device-width: 400px) {
   .loginButton {
     background-color: #f08135;

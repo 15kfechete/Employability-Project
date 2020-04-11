@@ -51,12 +51,12 @@ footer ul li {
     padding: 60px;
 
     display: grid;
-    grid-template-areas: "footerLogo footerLeft . footerLeftCentre footerRightCentre footerRight";
-    grid-template-columns: 15% 20% 5% 1fr 1fr 1fr;
+    grid-template-areas:
+      ". footerLogo  ."
+      ". footerRight .";
   }
 
   .footerLogo {
-    display: none;
   }
 
   .footerLeft {
@@ -70,16 +70,21 @@ footer ul li {
     display: none;
   }
   .footerRight {
-    display: none;
+    width: 400px;
   }
 
   footer h4 {
-    display: none;
+    list-style-type: none;
+    text-align: left;
+    padding-top: 15px;
   }
 
   footer ul li {
-    display: none;
+    list-style-type: none;
+    text-align: left;
+    padding-top: 15px;
   }
+
   .footerText {
     display: none;
   }

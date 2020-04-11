@@ -87,7 +87,10 @@ function LoginPage() {
             <button className="loginButton" type="submit">
               Register
             </button>
-            Not Registered?
+            <p>
+              Already have an account?
+              <span className="linkHighlight"> Login here</span>
+            </p>
           </div>
         </form>
       </>

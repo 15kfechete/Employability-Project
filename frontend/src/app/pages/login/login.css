@@ -56,6 +56,10 @@ input {
   padding-top: 20px;
 }
 
+.linkHighlight {
+  font-weight: bolder;
+}
+
 @media only screen and (max-device-width: 400px) {
   body {
   }
