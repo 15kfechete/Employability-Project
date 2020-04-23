@@ -1,15 +1,30 @@
+.profile-wrapper {
+  margin: 30px;
+}
+
 .claims {
   display: grid;
   grid-template: 1fr;
 }
 
 .claim {
-  width: 80vw;
-  height: 50px;
+  font-size: 1.3rem;
   background-color: #65b6b6;
   text-align: center;
-  border-radius: 100px 100px 100px 100px;
-
-  margin: 1rem;
+  border-radius: 50px 50px 15px 15px;
+  margin: 3rem;
+  margin-top: 1rem;
   padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.claim .document-image {
+  font-size: 5rem;
+  color: white;
+  font-weight: 900;
+}
+
+.make-claim {
+  margin: 3rem;
+  margin-top: 1rem;
 }

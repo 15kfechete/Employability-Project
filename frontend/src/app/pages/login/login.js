@@ -33,7 +33,7 @@ function LoginPage() {
   const [state, setState] = useContext(AppContext)
 
   const [loadUser, { called, loading, data }] = useLazyQuery(GET_USER_QUERY, {
-    variables: { email: email },
+    variables: { email },
   })
 
   const handleSubmit = (event) => {

@@ -9,6 +9,11 @@ import { StyledMenu } from './Menu.styled'
 const Menu = ({ open, setOpen }) => {
   const [state, setState] = useContext(AppContext)
 
+  const logout = () => {
+    setOpen(false)
+    setState({})
+  }
+
   return (
     <StyledMenu open={open}>
       {state.user ? (
@@ -16,7 +21,7 @@ const Menu = ({ open, setOpen }) => {
           <Link to="/profile" onClick={() => setOpen(false)}>
             View profile
           </Link>
-          <Link to="/logout" onClick={() => setOpen(false)}>
+          <Link to="/logout" onClick={logout}>
             LOGOUT
           </Link>
         </>
