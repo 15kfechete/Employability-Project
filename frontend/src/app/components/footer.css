@@ -46,6 +46,46 @@ footer ul li {
 
 @media only screen and (max-device-width: 400px) {
   footer {
+    background-color: #2c353c;
+    color: white;
+    padding: 60px;
+
+    display: grid;
+    grid-template-areas:
+      ". footerLogo  ."
+      ". footerRight .";
+  }
+
+  .footerLogo {
+  }
+
+  .footerLeft {
+    display: none;
+  }
+
+  .footerLeftCentre {
+    display: none;
+  }
+  .footerRightCentre {
+    display: none;
+  }
+  .footerRight {
+    width: 400px;
+  }
+
+  footer h4 {
+    list-style-type: none;
+    text-align: left;
+    padding-top: 15px;
+  }
+
+  footer ul li {
+    list-style-type: none;
+    text-align: left;
+    padding-top: 15px;
+  }
+
+  .footerText {
     display: none;
   }
 }

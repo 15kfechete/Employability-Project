@@ -2,6 +2,7 @@
   width: 100%;
   object-fit: cover;
 }
+
 .contentBlock {
   display: block;
   width: 50%;
@@ -40,6 +41,7 @@ form {
   margin: 4px 2px;
 
   width: 100%;
+  grid-area: login;
 }
 
 input {
@@ -54,13 +56,15 @@ input {
   padding-top: 20px;
 }
 
+.linkHighlight {
+  font-weight: bolder;
+}
+
 @media only screen and (max-device-width: 400px) {
   body {
-    background-color: #f08135;
   }
 
   .banner-image {
-    width: 400px;
     object-fit: cover;
 
     display: none;
@@ -70,14 +74,14 @@ input {
     display: block;
     width: 80%;
     margin: 0 auto;
-    padding-top: 100px;
-    padding-bottom: 150px;
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 
   .loginButton {
-    background-color: #000000;
+    background-color: #f08135;
     border: none;
-    color: #f08135;
+    color: #000000;
     padding: 20px;
     text-align: center;
     text-decoration: none;

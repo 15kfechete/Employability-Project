@@ -80,7 +80,10 @@ function LoginPage() {
               LOGIN
             </button>
           </div>
-          <h4>Not logged in?</h4>
+          <p>
+            Don't have an account?
+            <span className="linkHighlight"> Sign up here</span>
+          </p>
         </form>
       </>
     )
